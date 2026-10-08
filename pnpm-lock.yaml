@@ -17,6 +17,9 @@ importers:
 
   apps/api:
     dependencies:
+      '@auditpilot/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       express:
         specifier: latest
         version: 5.2.1

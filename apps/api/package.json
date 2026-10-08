@@ -12,7 +12,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "@auditpilot/config": "workspace:*"
   },
   "devDependencies": {
     "tsx": "latest",
