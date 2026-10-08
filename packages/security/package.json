@@ -1,0 +1,14 @@
+{
+  "name": "@auditpilot/security",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "lint": "echo lint:security",
+    "clean": "rm -rf dist"
+  }
+}
