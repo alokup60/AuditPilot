@@ -1,13 +1,15 @@
-import express from 'express';
-import { config } from "@auditpilot/config";
+import { config } from '@auditpilot/config';
+import app from './app.js';
+import { connectMongoDB } from './infrastructure/mongodb.js';
 
-const app = express();
-app.disable('x-powered-by');
-app.use(express.json({ limit: '1mb' }));
+async function startServer() {
+  await connectMongoDB();
 
-app.get('/health', (_req, res) => res.json({ status: 'ok' }));
+  const port = config.server.port;
 
-const port = Number(config.server.port ?? 4000);
-app.listen(port, () => {
-  console.log(`API listening on http://localhost:${port}`);
-});
+  app.listen(port, () => {
+    console.log(`API listening on http://localhost:${port}`);
+  });
+}
+
+startServer();

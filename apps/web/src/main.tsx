@@ -16,4 +16,3 @@ function App(): React.ReactElement {
 }
 
 createRoot(document.getElementById('root')!).render(<App />);
-

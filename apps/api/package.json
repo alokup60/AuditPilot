@@ -12,14 +12,15 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
+    "@auditpilot/config": "workspace:*",
     "express": "latest",
-    "@auditpilot/config": "workspace:*"
+    "mongoose": "^9.11.1"
   },
   "devDependencies": {
+    "@types/express": "latest",
+    "@types/node": "latest",
     "tsx": "latest",
     "typescript": "latest",
-    "vitest": "latest",
-    "@types/express": "latest",
-    "@types/node": "latest"
+    "vitest": "latest"
   }
 }
